@@ -1,0 +1,34 @@
+<div class="row">
+<div class="col-sm-3"></div>
+
+<div class="col-sm-6">
+<h1>Search for details</h1>
+<form (ngSubmit)="isubmit(f)" #f="ngForm"> 
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text"
+             class="form-control"
+             id="fname"
+               [(ngModel)]="user.fname"
+             name="fname"
+             maxlength="50"
+             required
+              >
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<div class="col-sm-3"></div>
+</div>
+
+<div class="container">
+  <div class="row">
+          <div class="col-sm-3 color" >
+            Name:{{user.fname}}{{this.user.lname}}<br>
+            Number:{{user.telenum}}<br>
+            Address:{{user.address}}<br>  
+          </div>
+      
+  </div>
+</div>

@@ -1,0 +1,16 @@
+
+
+<!--To display all details -->
+<div class="container">
+  <div class="row">
+      <div  *ngFor="let hero of listtArray; let i=index">
+          <div class="col-sm-3 color" >
+            Name:{{listtArray[i].fname}}{{listtArray[i].lname}}<br>
+            Number:{{listtArray[i].telenum}}<br>
+            Address:{{listtArray[i].address}}<br>
+               <button type="button" class="btn btn-default" (click)="clicked(i)">Edit</button> 
+               
+          </div>
+      </div>
+  </div>
+</div>
